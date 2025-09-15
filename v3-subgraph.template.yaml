@@ -9,11 +9,11 @@ features:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: {{ network }}
+    network: hyperevm
     source:
       abi: Factory
-      address: "{{factory}}"
-      startBlock: {{ startblock }}
+      address: '0xaac10f46553605eafa08e56dd76243efcd6b9c19'
+      startBlock: 123456
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -39,7 +39,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: {{ network }}
+    network: hyperevm
     source:
       abi: Pool
     mapping:
