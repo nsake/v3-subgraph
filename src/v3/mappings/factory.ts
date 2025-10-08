@@ -9,13 +9,20 @@ import { fetchTokenDecimals, fetchTokenName, fetchTokenSymbol, fetchTokenTotalSu
 import { ADDRESS_ZERO, ONE_BI, ZERO_BD, ZERO_BI } from './../../common/constants'
 
 export function handlePoolCreated(event: PoolCreated): void {
-  const factoryAddress = Address.fromString(FACTORY_ADDRESS)
+  const factoryAddress = FACTORY_ADDRESS
   const whitelistTokens = WHITELIST_TOKENS
   const poolsToSkip = SKIP_POOLS
   const poolMappings = POOL_MAPINGS
 
   // temp fix
-  if (poolsToSkip.includes(event.params.pool.toHexString())) {
+  // if (poolsToSkip.includes(event.params.pool.toHexString())) {
+  //   return
+  // }
+
+
+   log.log(log.Level.INFO, `LIST: ${poolsToSkip.toString()}, income: ${event.params.pool.toHexString()}`);
+  
+  if (!poolsToSkip.includes(event.params.pool.toHexString().toLowerCase())) {
     return
   }
 
