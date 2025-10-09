@@ -15,16 +15,16 @@ export function handlePoolCreated(event: PoolCreated): void {
   const poolMappings = POOL_MAPINGS
 
   // temp fix
-  // if (poolsToSkip.includes(event.params.pool.toHexString())) {
-  //   return
-  // }
-
-
-   log.log(log.Level.INFO, `LIST: ${poolsToSkip.toString()}, income: ${event.params.pool.toHexString()}`);
-  
-  if (!poolsToSkip.includes(event.params.pool.toHexString().toLowerCase())) {
+  if (poolsToSkip.includes(event.params.pool.toHexString())) {
     return
   }
+
+
+  //  log.log(log.Level.INFO, `LIST: ${poolsToSkip.toString()}, income: ${event.params.pool.toHexString()}`);
+  
+  // if (!poolsToSkip.includes(event.params.pool.toHexString().toLowerCase())) {
+  //   return
+  // }
 
   // load factory
   let factory = Factory.load(factoryAddress.toHexString())
