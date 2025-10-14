@@ -69,6 +69,7 @@ export function getSubgraphName(subgraphType: string): string {
     }
     return process.env.V3_TOKEN_SUBGRAPH_NAME
   }
+  
   if (!process.env.V3_SUBGRAPH_NAME) {
     throw new Error('V3_SUBGRAPH_NAME must be set')
   }

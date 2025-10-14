@@ -1,2 +1,2 @@
-V3_TOKEN_SUBGRAPH_NAME="v3-tokens-hyperevm"
-V3_SUBGRAPH_NAME="uniswap-v3-hyperevm"
+V3_TOKEN_SUBGRAPH_NAME="v3-tokens"
+V3_SUBGRAPH_NAME="v3-subgraph"
