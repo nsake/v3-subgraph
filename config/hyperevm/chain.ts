@@ -1,9 +1,10 @@
 import { Address, BigDecimal, BigInt } from '@graphprotocol/graph-ts';
 
 export const FACTORY_ADDRESS = Address.fromString('0x3520773ebe1cf68f23e2065abd5dcc1589647f50');
+export const NONFUNGIBLE_POSITION_MANAGER_ADDRESS = Address.fromString('0x72F0E529eb633d31f0515f0240050428ba55962B');
 
 export const REFERENCE_TOKEN = '0x5555555555555555555555555555555555555555'; // WHYPE
-export const STABLE_TOKEN_POOL = '0x337b56d87a6185cd46af3ac2cdf03cbc37070c30'; // USDT0/WHYPE
+export const STABLE_TOKEN_POOL = '0x5B6Bbc381556306e8D4C4DA5A46B2c0D338941BD'; // USDT0/WHYPE
 export const POOL_EVENTS_FROM_BLOCK = 1; // TODO: set to desired cutoff
 
 export const TVL_MULTIPLIER_THRESHOLD = '2';
@@ -31,4 +32,3 @@ export class TokenDefinition {
   name: string;
   decimals: BigInt;
 }
-
