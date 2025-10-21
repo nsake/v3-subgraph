@@ -41,8 +41,8 @@ dataSources:
     network: hyperevm
     source:
       abi: NonfungiblePositionManager
-      address: '0x72F0E529eb633d31f0515f0240050428ba55962B'
-      startBlock: 15900000
+      address: '0x8fAb7C75A528550c8Bd285C79A83D6E143F4A6E0'
+      startBlock: 16497105
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
